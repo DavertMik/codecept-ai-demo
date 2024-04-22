@@ -1,10 +1,10 @@
-const openai = new OpenAI({ apiKey: process.env['OPENAI_API_KEY'] })
+const OpenAI = require('openai');
 const Anthropic = require('@anthropic-ai/sdk');
 const Groq = require("groq-sdk");
 
 require('dotenv').config({ path: '.env' });
 
-const OpenAI = require('openai');
+const openai = new OpenAI({ apiKey: process.env['OPENAI_API_KEY'] })
 
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY
